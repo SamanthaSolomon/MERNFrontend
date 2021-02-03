@@ -1,4 +1,6 @@
 import React from "react"
+import { Route, Link, Switch } from "react-router-dom";
+import Profile from "./Profile"
 
 const Display = (props) => {
 
@@ -11,8 +13,10 @@ const Display = (props) => {
                 {names.map((name) => {
                     return (
                         <article key={name._id}>
-                            <h3>{name.name}</h3>
-                            <h4>{name.sign}</h4>
+                            <button onClick={()=> {
+                                props.chooseName(name)
+                                props.history.push("/profile")
+                            }}>{name.name}</button>
                         </article>
                     )
                 })}
