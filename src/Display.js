@@ -1,6 +1,7 @@
 import React from "react"
 import { Route, Link, Switch } from "react-router-dom";
 import Profile from "./Profile"
+import Form from "./Form"
 
 const Display = (props) => {
 
@@ -24,7 +25,7 @@ const Display = (props) => {
         )
     }
     const loading = <h3>Loading...</h3>
-    return names.length > 0 ? loaded() : loading; 
+    return names.length > 0 ? loaded() : loading;       
 }
 
 export default Display
